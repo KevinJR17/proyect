@@ -1,6 +1,8 @@
 import React from 'react'
 import { CategoryProductRow } from './CategoryProductRow'
+import { sportsList, electronicsList } from '../assets/filteredByCategories'
 import '../styles/ProductTable.css'
+
 function ProductTable() {
   return (
     <div className='product-table'>
@@ -13,8 +15,8 @@ function ProductTable() {
             </span>
         </div>
         <div className='product-table_category'>
-            <CategoryProductRow/>
-            <CategoryProductRow/>
+        <CategoryProductRow title='Sporting Goods' list={sportsList} />
+                <CategoryProductRow title='Electronics' list={electronicsList} />
         </div>
     </div>
   )
